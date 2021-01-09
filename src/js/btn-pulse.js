@@ -1,4 +1,4 @@
-registerPaint('btn-pulse', class {
+class BtnPulse {
   static get inputProperties() {
     return ['--x', '--y', '--rad', '--pulse-rad', '--fill', '--pulse-stroke-color']
   }
@@ -23,4 +23,6 @@ registerPaint('btn-pulse', class {
     this._paintCircles(ctx, fill, '#fff', x.value, y.value, rad.value)
     this._paintCircles(ctx, 'transparent', pulseStrokeColor, x.value, y.value, pulseRad.value + rad.value)
   }
-})
+}
+
+registerPaint('btn-pulse', BtnPulse)
