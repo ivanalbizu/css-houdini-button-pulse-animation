@@ -27,7 +27,7 @@ body {
   --rad: 0;
   --pulse-rad: 0;
   --pulse-stroke-color: rgba(255, 255, 255, 1);
-  background: tomato paint(btnPulse);
+  background: tomato paint(btn-pulse);
   transition: --rad linear .2s;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .button--dark {
-  background: #260d00 paint(btnPulse);
+  background: #260d00 paint(btn-pulse);
 }
 
 .button--fill {

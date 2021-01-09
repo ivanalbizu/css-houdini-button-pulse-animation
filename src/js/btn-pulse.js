@@ -26,5 +26,5 @@ if (typeof registerPaint !== 'undefined') {
     }
   }
 
-  registerPaint('btnPulse', BtnPulse)
+  registerPaint('btn-pulse', BtnPulse)
 }
