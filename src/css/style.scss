@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  appearance: none;
+  cursor: none;
+  border: 0;
+  padding: .3em;
+  margin: 1em;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1.2em, 3vw, 2em);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(320px, 400px, 100%);
+  height: 4em;
+  color: #fff;
+  --x: -20;
+  --y: -20;
+  --rad: 0;
+  --pulse-rad: 0;
+  --pulse-stroke-color: rgba(255, 255, 255, 1);
+  background: tomato paint(btnPulse);
+  transition: --rad linear .2s;
+  &:focus {
+    outline: none;
+  }
+  &--dark {
+    background: #260d00 paint(btnPulse);
+  }
+  &--fill {
+    --fill: #4b4ea5;
+  }
+  &.hover {
+    animation: pulse 1s linear infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    --pulse-stroke-color: rgba(255, 255, 255, 1);
+  }
+  60% {
+    --pulse-rad: calc(var(--rad) + 5);
+    --pulse-stroke-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    --pulse-rad: calc(var(--rad) + 5);
+    --pulse-stroke-color: rgba(255, 255, 255, 0);
+  }
+}
